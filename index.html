@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
+/* Make the cursor appear as a pointer when hovering over any image */
+img {
+  cursor: pointer;
+}
 /* Add shadow effect on image hover */
 img:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -69,6 +73,27 @@ img:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+#mobile_lab_shell {
+            position: relative;
+            bottom: 20px;
+            right: -500px;
+            width: 700px;
+            height: 200px;
+        }
+#mobile_lab_text {
+    position: relative;
+    top: 50%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
 </style>
 </head>
 <body>
@@ -98,17 +123,19 @@ img:hover {
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
-  <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="Data">
+<!-- Project Section -->
+<div class="w3-container w3-padding-32" id="Data">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Data Sources</h3>
   </div>
-
-  <div class="w3-col l3 m6 w3-margin-bottom">
-    <div class="w3-display-container">
-      <div class="w3-display-topleft w3-black w3-padding">Mobile Lab</div>
-      <img src="./images/mobile_lab_shell.jpg" alt="Mobile_Lab" style="width:99%">
+  
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <!-- Add a class to this div for styling -->
+        <div id="mobile_lab_text" class="w3-display-topleft w3-black w3-padding mobile-lab">Mobile Lab</div>
+        <img id ="mobile_lab_shell" src="./images/mobile_lab_shell.jpg" alt="Mobile_Lab" style="width:99%" class="center-image">
+      </div>
     </div>
-  </div>
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
@@ -145,6 +172,7 @@ img:hover {
     </div>
   </div>
 
+  
   <!-- About Section -->
   <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
